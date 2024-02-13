@@ -1,0 +1,18 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<body>
+<h2>User Login</h2>
+<t:form t:id="loginForm">
+<!--    <label for="username">Username:</label>-->
+    <t:textfield t:id="username" validate="required" t:mixins="formgroup"/>
+    <br/>
+
+<!--    <label for="password">Password:</label>-->
+    <t:passwordfield t:id="password"  validate="required" t:mixins="formgroup"/>
+    <br/>
+
+    <t:submit value="Login"/>
+</t:form>
+<!--<p t:type="if" t:test="exists loginError">${loginError}</p>-->
+
+</body>
+</html>

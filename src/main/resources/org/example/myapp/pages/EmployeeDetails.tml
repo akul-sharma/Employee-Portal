@@ -1,0 +1,15 @@
+<!-- EmployeeDetails.tml -->
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<body>
+<h2>Employee Details</h2>
+
+<t:if test="employee">
+    <p><strong>ID:</strong> ${employee.id}</p>
+    <p><strong>Name:</strong> ${employee.name}</p>
+    <p><strong>Age:</strong> ${employee.age}</p>
+    <p><strong>Address:</strong> ${employee.address}</p>
+</t:if>
+
+<p><a href="EmployeeList">Back to Employee List</a></p>
+</body>
+</html>

@@ -1,0 +1,8 @@
+org\example\myapp\pages\Login.class
+org\example\myapp\services\LoginService.class
+org\example\myapp\services\LoginServiceImpl.class
+org\example\myapp\pages\EmployeeList.class
+org\example\myapp\services\MyAppModule.class
+org\example\myapp\pages\Index.class
+org\example\myapp\pages\EmployeeDetails.class
+org\example\myapp\entities\Employee.class
