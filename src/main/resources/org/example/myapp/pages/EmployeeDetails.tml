@@ -1,15 +1,119 @@
 <!-- EmployeeDetails.tml -->
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .details-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: auto;
+            box-sizing: border-box;
+            margin-top: 50px;
+        }
+
+        .details-heading {
+            flex: 1 100%;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .details-left,
+        .details-right {
+            flex: 1;
+        }
+
+        .details-item {
+            margin-bottom: 15px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-<h2>Employee Details</h2>
+<div class="details-container">
+    <div class="details-heading">
+        <h2>Employee Details</h2>
+    </div>
 
-<t:if test="employee">
-    <p><strong>ID:</strong> ${employee.id}</p>
-    <p><strong>Name:</strong> ${employee.name}</p>
-    <p><strong>Age:</strong> ${employee.age}</p>
-    <p><strong>Address:</strong> ${employee.address}</p>
-</t:if>
+    <div class="details-left" style="margin-left:30%">
+        <t:if test="employee">
+            <div class="details-item">
+                <p><strong>ID:</strong></p>
+            </div>
+            <div class="details-item">
+                <p><strong>Name:</strong></p>
+            </div>
+            <div class="details-item">
+                <p><strong>Age:</strong></p>
+            </div>
+            <div class="details-item">
+                <p><strong>Address:</strong></p>
+            </div>
+            <div class="details-item">
+                <p><strong>Username:</strong></p>
+            </div>
+            <div class="details-item">
+                <p><strong>Password:</strong></p>
+            </div>
+        </t:if>
+    </div>
 
-<p><a href="EmployeeList">Back to Employee List</a></p>
+    <div class="details-right">
+        <t:if test="employee">
+            <div class="details-item">
+                <p>${employee.id}</p>
+            </div>
+            <div class="details-item">
+                <p>${employee.name}</p>
+            </div>
+            <div class="details-item">
+                <p>${employee.age}</p>
+            </div>
+            <div class="details-item">
+                <p>${employee.address}</p>
+            </div>
+            <div class="details-item">
+                <p>${employee.username}</p>
+            </div>
+            <div class="details-item">
+                <p>${employee.password}</p>
+            </div>
+        </t:if>
+    </div>
+</div>
+
+<div class="back-link">
+    <p><t:pagelink page="EmployeeList">&lt;&lt; Back to Employee List</t:pagelink></p>
+</div>
+
+
 </body>
 </html>

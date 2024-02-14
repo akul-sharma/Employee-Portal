@@ -31,20 +31,37 @@ public class Login {
     @InjectComponent
     private Form loginForm;
 
+//    @Property
+//    private boolean loginSuccessful;
+
 
     void onValidateFromLoginForm(){
-        System.out.println("in validation-");
-        System.out.println(username+" "+password);
+//        System.out.println("in validation-");
+//        System.out.println(username+" "+password);
+//        System.out.println(loginService.isValidLogin(username, password));
         if (!loginService.isValidLogin(username, password)) {
+            System.out.println("Error has occured");
            loginForm.recordError("Invalid username or password");
+
         }
     }
 
     Object onSuccess() {
         System.out.println("on success");
         System.out.println(username+" "+password);
+//        loginSuccessful = true;
         return EmployeeList.class;
     }
+
+//    void onFailure() {
+//        System.out.println("on failure called");
+//        loginSuccessful = false;
+//    }
+
+//    public boolean isLoginSuccessful() {
+//        System.out.println("Checking for login message");
+//        return loginSuccessful;
+//    }
 
 
 

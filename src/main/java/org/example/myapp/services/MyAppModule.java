@@ -22,6 +22,7 @@ public class MyAppModule {
     public static void bind(ServiceBinder binder) {
 //        configuration.add(LoginService.class, loginServiceImpl);
         binder.bind(LoginService.class, LoginServiceImpl.class).withId("LoginServiceImpl");
+        binder.bind(EmployeeService.class, EmployeeServiceImpl.class).withId("EmployeeServiceImpl");
     }
 
 //    @Contribute(ServiceBinder.class)
