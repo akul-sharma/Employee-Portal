@@ -58,7 +58,8 @@
     </style>
 </head>
 <body>
-<div class="details-container">
+<div t:id="header" />
+<div class="details-container" style="margin-top:40px">
     <div class="details-heading">
         <h2>Employee Details</h2>
     </div>

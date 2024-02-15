@@ -41,6 +41,7 @@
     </style>
 </head>
 <body>
+<div t:id="header"/>
 <div class="login-container">
     <h2>User Login</h2>
     <t:form t:id="loginForm">

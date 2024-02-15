@@ -7,6 +7,7 @@ import org.apache.tapestry5.beaneditor.Validate;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.example.myapp.components.Header;
 import org.example.myapp.entities.Employee;
 import org.example.myapp.services.LoginService;
 
@@ -30,6 +31,9 @@ public class Login {
 
     @InjectComponent
     private Form loginForm;
+
+    @Component
+    private Header header;
 
 //    @Property
 //    private boolean loginSuccessful;
